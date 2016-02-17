@@ -22,7 +22,7 @@
 		FA8B8E681B65193F00AA65AF /* NSImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B8E671B65193F00AA65AF /* NSImage+Resize.swift */; };
 		FAC43DCC1B35D8B100C06102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43DCB1B35D8B100C06102 /* AppDelegate.swift */; };
 		FAC43DD01B35D8B100C06102 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC43DCF1B35D8B100C06102 /* Images.xcassets */; };
-		FAC43DDF1B35D8B100C06102 /* ClipyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43DDE1B35D8B100C06102 /* ClipyTests.swift */; };
+		FAC43DDF1B35D8B100C06102 /* XClipdiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43DDE1B35D8B100C06102 /* XClipdiaryTests.swift */; };
 		FAC43DF71B35DD4300C06102 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAC43DF91B35DD4300C06102 /* Localizable.strings */; };
 		FAC43E1B1B35DF4A00C06102 /* PTHotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC43E191B35DF2500C06102 /* PTHotKey.framework */; };
 		FAC43E1C1B35DF4A00C06102 /* PTHotKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAC43E191B35DF2500C06102 /* PTHotKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -59,7 +59,7 @@
 			containerPortal = FAC43DBE1B35D8B100C06102 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FAC43DC51B35D8B100C06102;
-			remoteInfo = Clipy;
+			remoteInfo = XClipdiary;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -100,8 +100,8 @@
 		FAC43DCF1B35D8B100C06102 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FAC43DD81B35D8B100C06102 /* XClipdiary.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XClipdiary.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC43DDD1B35D8B100C06102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAC43DDE1B35D8B100C06102 /* ClipyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipyTests.swift; sourceTree = "<group>"; };
-		FAC43DE81B35DAA400C06102 /* Clipy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clipy-Bridging-Header.h"; sourceTree = "<group>"; };
+		FAC43DDE1B35D8B100C06102 /* XClipdiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XClipdiaryTests.swift; sourceTree = "<group>"; };
+		FAC43DE81B35DAA400C06102 /* XClipdiary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XClipdiary-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAC43DF81B35DD4300C06102 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FAC43DFA1B35DD5200C06102 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FAC43E191B35DF2500C06102 /* PTHotKey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PTHotKey.framework; sourceTree = "<group>"; };
@@ -110,22 +110,22 @@
 		FAC43E261B35DFD300C06102 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		FAC43E281B35DFDA00C06102 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FAC43E2A1B35DFDF00C06102 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		FAC43E441B35E12900C06102 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLMSupport.swift; path = Clipy/Libraries/Realm/RLMSupport.swift; sourceTree = SOURCE_ROOT; };
-		FAC43E461B35E13000C06102 /* ShortcutRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShortcutRecorder.h; path = Clipy/Libraries/ShortcutRecorder/ShortcutRecorder.h; sourceTree = SOURCE_ROOT; };
-		FAC43E471B35E13000C06102 /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRCommon.h; path = Clipy/Libraries/ShortcutRecorder/SRCommon.h; sourceTree = SOURCE_ROOT; };
-		FAC43E481B35E13000C06102 /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRCommon.m; path = Clipy/Libraries/ShortcutRecorder/SRCommon.m; sourceTree = SOURCE_ROOT; };
-		FAC43E491B35E13000C06102 /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRKeyCodeTransformer.h; path = Clipy/Libraries/ShortcutRecorder/SRKeyCodeTransformer.h; sourceTree = SOURCE_ROOT; };
-		FAC43E4A1B35E13000C06102 /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRKeyCodeTransformer.m; path = Clipy/Libraries/ShortcutRecorder/SRKeyCodeTransformer.m; sourceTree = SOURCE_ROOT; };
-		FAC43E4B1B35E13000C06102 /* SRRecorderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRecorderCell.h; path = Clipy/Libraries/ShortcutRecorder/SRRecorderCell.h; sourceTree = SOURCE_ROOT; };
-		FAC43E4C1B35E13000C06102 /* SRRecorderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRRecorderCell.m; path = Clipy/Libraries/ShortcutRecorder/SRRecorderCell.m; sourceTree = SOURCE_ROOT; };
-		FAC43E4D1B35E13000C06102 /* SRRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRecorderControl.h; path = Clipy/Libraries/ShortcutRecorder/SRRecorderControl.h; sourceTree = SOURCE_ROOT; };
-		FAC43E4E1B35E13000C06102 /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRRecorderControl.m; path = Clipy/Libraries/ShortcutRecorder/SRRecorderControl.m; sourceTree = SOURCE_ROOT; };
-		FAC43E4F1B35E13000C06102 /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRValidator.h; path = Clipy/Libraries/ShortcutRecorder/SRValidator.h; sourceTree = SOURCE_ROOT; };
-		FAC43E501B35E13000C06102 /* SRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRValidator.m; path = Clipy/Libraries/ShortcutRecorder/SRValidator.m; sourceTree = SOURCE_ROOT; };
-		FAC43E561B35E13D00C06102 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPrefsWindowController.h; path = Clipy/Libraries/DBPrefsWindowController/DBPrefsWindowController.h; sourceTree = SOURCE_ROOT; };
-		FAC43E571B35E13D00C06102 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBPrefsWindowController.m; path = Clipy/Libraries/DBPrefsWindowController/DBPrefsWindowController.m; sourceTree = SOURCE_ROOT; };
-		FAC43E591B35E14500C06102 /* NMLoginItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMLoginItems.h; path = Clipy/Libraries/NMLoginItems/NMLoginItems.h; sourceTree = SOURCE_ROOT; };
-		FAC43E5A1B35E14500C06102 /* NMLoginItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMLoginItems.m; path = Clipy/Libraries/NMLoginItems/NMLoginItems.m; sourceTree = SOURCE_ROOT; };
+		FAC43E441B35E12900C06102 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLMSupport.swift; path = XClipdiary/Libraries/Realm/RLMSupport.swift; sourceTree = SOURCE_ROOT; };
+		FAC43E461B35E13000C06102 /* ShortcutRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShortcutRecorder.h; path = XClipdiary/Libraries/ShortcutRecorder/ShortcutRecorder.h; sourceTree = SOURCE_ROOT; };
+		FAC43E471B35E13000C06102 /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRCommon.h; path = XClipdiary/Libraries/ShortcutRecorder/SRCommon.h; sourceTree = SOURCE_ROOT; };
+		FAC43E481B35E13000C06102 /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRCommon.m; path = XClipdiary/Libraries/ShortcutRecorder/SRCommon.m; sourceTree = SOURCE_ROOT; };
+		FAC43E491B35E13000C06102 /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRKeyCodeTransformer.h; path = XClipdiary/Libraries/ShortcutRecorder/SRKeyCodeTransformer.h; sourceTree = SOURCE_ROOT; };
+		FAC43E4A1B35E13000C06102 /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRKeyCodeTransformer.m; path = XClipdiary/Libraries/ShortcutRecorder/SRKeyCodeTransformer.m; sourceTree = SOURCE_ROOT; };
+		FAC43E4B1B35E13000C06102 /* SRRecorderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRecorderCell.h; path = XClipdiary/Libraries/ShortcutRecorder/SRRecorderCell.h; sourceTree = SOURCE_ROOT; };
+		FAC43E4C1B35E13000C06102 /* SRRecorderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRRecorderCell.m; path = XClipdiary/Libraries/ShortcutRecorder/SRRecorderCell.m; sourceTree = SOURCE_ROOT; };
+		FAC43E4D1B35E13000C06102 /* SRRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRecorderControl.h; path = XClipdiary/Libraries/ShortcutRecorder/SRRecorderControl.h; sourceTree = SOURCE_ROOT; };
+		FAC43E4E1B35E13000C06102 /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRRecorderControl.m; path = XClipdiary/Libraries/ShortcutRecorder/SRRecorderControl.m; sourceTree = SOURCE_ROOT; };
+		FAC43E4F1B35E13000C06102 /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRValidator.h; path = XClipdiary/Libraries/ShortcutRecorder/SRValidator.h; sourceTree = SOURCE_ROOT; };
+		FAC43E501B35E13000C06102 /* SRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRValidator.m; path = XClipdiary/Libraries/ShortcutRecorder/SRValidator.m; sourceTree = SOURCE_ROOT; };
+		FAC43E561B35E13D00C06102 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPrefsWindowController.h; path = XClipdiary/Libraries/DBPrefsWindowController/DBPrefsWindowController.h; sourceTree = SOURCE_ROOT; };
+		FAC43E571B35E13D00C06102 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBPrefsWindowController.m; path = XClipdiary/Libraries/DBPrefsWindowController/DBPrefsWindowController.m; sourceTree = SOURCE_ROOT; };
+		FAC43E591B35E14500C06102 /* NMLoginItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMLoginItems.h; path = XClipdiary/Libraries/NMLoginItems/NMLoginItems.h; sourceTree = SOURCE_ROOT; };
+		FAC43E5A1B35E14500C06102 /* NMLoginItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMLoginItems.m; path = XClipdiary/Libraries/NMLoginItems/NMLoginItems.m; sourceTree = SOURCE_ROOT; };
 		FAC43E5D1B35E1C300C06102 /* CPYClip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYClip.swift; sourceTree = "<group>"; };
 		FAC43E5F1B35E3DF00C06102 /* CPYClipData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYClipData.swift; sourceTree = "<group>"; };
 		FAC43E611B35EA4E00C06102 /* CPYFolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYFolder.swift; sourceTree = "<group>"; };
@@ -240,8 +240,8 @@
 		FAC43DBD1B35D8B100C06102 = {
 			isa = PBXGroup;
 			children = (
-				FAC43DC81B35D8B100C06102 /* Clipy */,
-				FAC43DDB1B35D8B100C06102 /* ClipyTests */,
+				FAC43DC81B35D8B100C06102 /* XClipdiary */,
+				FAC43DDB1B35D8B100C06102 /* XClipdiaryTests */,
 				FAC43DC71B35D8B100C06102 /* Products */,
 				613917866A675237A79A4556 /* Pods */,
 				2CB0F71AAC48A392535FD3B0 /* Frameworks */,
@@ -257,7 +257,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FAC43DC81B35D8B100C06102 /* Clipy */ = {
+		FAC43DC81B35D8B100C06102 /* XClipdiary */ = {
 			isa = PBXGroup;
 			children = (
 				FA8B8E661B65190800AA65AF /* Categories */,
@@ -273,7 +273,7 @@
 				FAC43DFC1B35DDE700C06102 /* Libraries */,
 				FAC43DC91B35D8B100C06102 /* Supporting Files */,
 			);
-			path = Clipy;
+			path = XClipdiary;
 			sourceTree = "<group>";
 		};
 		FAC43DC91B35D8B100C06102 /* Supporting Files */ = {
@@ -281,19 +281,19 @@
 			children = (
 				FA0C027E1B42C2B2009A558D /* dsa_pub.pem */,
 				FAC43DCA1B35D8B100C06102 /* Info.plist */,
-				FAC43DE81B35DAA400C06102 /* Clipy-Bridging-Header.h */,
+				FAC43DE81B35DAA400C06102 /* XClipdiary-Bridging-Header.h */,
 				FAC43DF91B35DD4300C06102 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FAC43DDB1B35D8B100C06102 /* ClipyTests */ = {
+		FAC43DDB1B35D8B100C06102 /* XClipdiaryTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAC43DDE1B35D8B100C06102 /* ClipyTests.swift */,
+				FAC43DDE1B35D8B100C06102 /* XClipdiaryTests.swift */,
 				FAC43DDC1B35D8B100C06102 /* Supporting Files */,
 			);
-			path = ClipyTests;
+			path = XClipdiaryTests;
 			sourceTree = "<group>";
 		};
 		FAC43DDC1B35D8B100C06102 /* Supporting Files */ = {
@@ -419,7 +419,7 @@
 			dependencies = (
 			);
 			name = XClipdiary;
-			productName = Clipy;
+			productName = XClipdiary;
 			productReference = FAC43DC61B35D8B100C06102 /* XClipdiary.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -437,7 +437,7 @@
 				FAC43DDA1B35D8B100C06102 /* PBXTargetDependency */,
 			);
 			name = XClipdiaryTests;
-			productName = ClipyTests;
+			productName = XClipdiaryTests;
 			productReference = FAC43DD81B35D8B100C06102 /* XClipdiary.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -593,7 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC43DDF1B35D8B100C06102 /* ClipyTests.swift in Sources */,
+				FAC43DDF1B35D8B100C06102 /* XClipdiaryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,12 +731,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = Clipy/Info.plist;
+				INFOPLIST_FILE = XClipdiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.spolty.XClipdiary;
 				PRODUCT_NAME = XClipdiary;
-				SWIFT_OBJC_BRIDGING_HEADER = "Clipy/Clipy-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "XClipdiary/XClipdiary-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -753,12 +753,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = Clipy/Info.plist;
+				INFOPLIST_FILE = XClipdiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.spolty.XClipdiary;
 				PRODUCT_NAME = XClipdiary;
-				SWIFT_OBJC_BRIDGING_HEADER = "Clipy/Clipy-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "XClipdiary/XClipdiary-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -775,7 +775,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ClipyTests/Info.plist;
+				INFOPLIST_FILE = XClipdiaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clipyapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = XClipdiary;
@@ -792,9 +792,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ClipyTests/Info.plist;
+				INFOPLIST_FILE = XClipdiaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clipyapp.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spolty.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = XClipdiary;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XClipdiary.app/Contents/MacOS/XClipdiary";
 			};

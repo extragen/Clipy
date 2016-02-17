@@ -21,6 +21,8 @@ class CPYPreferenceWindowController: DBPrefsWindowController, NSWindowDelegate {
     @IBOutlet weak var mainShortcutRecorder: SRRecorderControl!
     @IBOutlet weak var historyShortcutRecorder: SRRecorderControl!
     @IBOutlet weak var snippetsShortcutRecorder: SRRecorderControl!
+    @IBOutlet weak var copyPrevClipRecorder: SRRecorderControl!
+    @IBOutlet weak var copyNextClipRecorder: SRRecorderControl!
     private var shortcutRecorders = [SRRecorderControl]()
     var storeTypes: NSMutableDictionary!
     
@@ -74,7 +76,13 @@ class CPYPreferenceWindowController: DBPrefsWindowController, NSWindowDelegate {
   
     // MARK: - Private Methods
     private func prepareHotKeys() {
-        self.shortcutRecorders = [self.mainShortcutRecorder, self.historyShortcutRecorder, self.snippetsShortcutRecorder]
+        self.shortcutRecorders = [
+            self.mainShortcutRecorder,
+            self.historyShortcutRecorder,
+            self.snippetsShortcutRecorder,
+            self.copyPrevClipRecorder,
+            self.copyNextClipRecorder
+        ]
         
         let hotKeyMap = CPYHotKeyManager.sharedManager.hotkeyMap
         let hotKeyCombos = NSUserDefaults.standardUserDefaults().objectForKey(kCPYPrefHotKeysKey) as! [String: AnyObject]
@@ -98,12 +106,20 @@ class CPYPreferenceWindowController: DBPrefsWindowController, NSWindowDelegate {
         let newKeyCombo = PTKeyCombo(keyCode: keyCombo.code, modifiers: aRecorder.cocoaToCarbonFlags(keyCombo.flags))
         
         var identifier = ""
-        if aRecorder == self.mainShortcutRecorder {
+        switch(aRecorder)
+        {
+        case self.mainShortcutRecorder:
             identifier = kClipMenuIdentifier
-        } else if aRecorder == self.historyShortcutRecorder {
+        case self.historyShortcutRecorder:
             identifier = kHistoryMenuIdentifier
-        } else if aRecorder == self.snippetsShortcutRecorder {
+        case self.snippetsShortcutRecorder:
             identifier = kSnippetsMenuIdentifier
+        case self.copyPrevClipRecorder:
+            identifier = kCopyPrevClipMenuIdentifier
+        case self.copyNextClipRecorder:
+            identifier = kCopyNextClipMenuIdentifier
+        default:
+            identifier = "";
         }
         
         let hotKeyCenter = PTHotKeyCenter.sharedCenter()

@@ -25,7 +25,12 @@ class AppDelegate: NSObject {
         CPYUtilities.registerUserDefaultKeys()
         
         // Migrate Realm
-        RLMRealm.setSchemaVersion(1, forRealmAtPath: RLMRealm.defaultRealmPath()) { (migrate, oldSchemaVersion) -> Void in }
+//        let config = RLMRealmConfiguration.defaultConfiguration()
+//        config.schemaVersion = 1
+//        config.migrationBlock = { (migrate, oldSchemaVersion) -> Void in }
+//        RLMRealmConfiguration.setDefaultConfiguration(config)
+//        print("----- path \(RLMRealm.defaultRealm().path)")
+//        RLMRealm.setSchemaVersion(1, forRealmAtPath: RLMRealm.defaultRealm().path) { (migrate, oldSchemaVersion) -> Void in }
 
         // Show menubar icon
         CPYMenuManager.sharedManager

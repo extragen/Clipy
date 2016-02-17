@@ -1,0 +1,836 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EB7901EB70A7ABAFB2DE18E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A26F5320EBAAB0F9D0813E /* Pods.framework */; };
+		476A3D8C1C73EC2A00B621B6 /* XCDClipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476A3D8A1C73EC2A00B621B6 /* XCDClipController.swift */; };
+		476A3D8D1C73EC2A00B621B6 /* XCDClipController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476A3D8B1C73EC2A00B621B6 /* XCDClipController.xib */; };
+		FA0C027F1B42C2B2009A558D /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = FA0C027E1B42C2B2009A558D /* dsa_pub.pem */; };
+		FA3B95F61B3FB9FD00B61FF0 /* CPYPreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B95F41B3FB9FD00B61FF0 /* CPYPreferenceWindowController.swift */; };
+		FA3B95FA1B3FBA1100B61FF0 /* CPYSnippetEditorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B95F81B3FBA1100B61FF0 /* CPYSnippetEditorWindowController.swift */; };
+		FA3B96041B3FD4AC00B61FF0 /* CPYImageAndTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B96031B3FD4AC00B61FF0 /* CPYImageAndTextCell.swift */; };
+		FA3B96061B3FD4BA00B61FF0 /* CPYFolderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B96051B3FD4BA00B61FF0 /* CPYFolderTableView.swift */; };
+		FA3B96081B3FD4C700B61FF0 /* CPYSnippetTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B96071B3FD4C700B61FF0 /* CPYSnippetTableView.swift */; };
+		FA51AAD31B4853ED00BDDE1D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA51AAD21B4853ED00BDDE1D /* MainMenu.xib */; };
+		FA71E3F81BA0A66300369F92 /* CPYHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E3F71BA0A66300369F92 /* CPYHistoryManager.swift */; };
+		FA823D761B4042F200009614 /* CPYSnippetEditorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA823D781B4042F200009614 /* CPYSnippetEditorWindowController.xib */; };
+		FA8B8E681B65193F00AA65AF /* NSImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B8E671B65193F00AA65AF /* NSImage+Resize.swift */; };
+		FAC43DCC1B35D8B100C06102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43DCB1B35D8B100C06102 /* AppDelegate.swift */; };
+		FAC43DD01B35D8B100C06102 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC43DCF1B35D8B100C06102 /* Images.xcassets */; };
+		FAC43DDF1B35D8B100C06102 /* ClipyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43DDE1B35D8B100C06102 /* ClipyTests.swift */; };
+		FAC43DF71B35DD4300C06102 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAC43DF91B35DD4300C06102 /* Localizable.strings */; };
+		FAC43E1B1B35DF4A00C06102 /* PTHotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC43E191B35DF2500C06102 /* PTHotKey.framework */; };
+		FAC43E1C1B35DF4A00C06102 /* PTHotKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAC43E191B35DF2500C06102 /* PTHotKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAC43E231B35DFC800C06102 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC43E221B35DFC800C06102 /* Foundation.framework */; };
+		FAC43E251B35DFD000C06102 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC43E241B35DFD000C06102 /* AppKit.framework */; };
+		FAC43E271B35DFD300C06102 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC43E261B35DFD300C06102 /* Carbon.framework */; };
+		FAC43E291B35DFDA00C06102 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC43E281B35DFDA00C06102 /* Cocoa.framework */; };
+		FAC43E2B1B35DFDF00C06102 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC43E2A1B35DFDF00C06102 /* WebKit.framework */; };
+		FAC43E451B35E12900C06102 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E441B35E12900C06102 /* RLMSupport.swift */; };
+		FAC43E511B35E13000C06102 /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E481B35E13000C06102 /* SRCommon.m */; };
+		FAC43E521B35E13000C06102 /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E4A1B35E13000C06102 /* SRKeyCodeTransformer.m */; };
+		FAC43E531B35E13000C06102 /* SRRecorderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E4C1B35E13000C06102 /* SRRecorderCell.m */; };
+		FAC43E541B35E13000C06102 /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E4E1B35E13000C06102 /* SRRecorderControl.m */; };
+		FAC43E551B35E13000C06102 /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E501B35E13000C06102 /* SRValidator.m */; };
+		FAC43E581B35E13D00C06102 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E571B35E13D00C06102 /* DBPrefsWindowController.m */; };
+		FAC43E5B1B35E14500C06102 /* NMLoginItems.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E5A1B35E14500C06102 /* NMLoginItems.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAC43E5E1B35E1C300C06102 /* CPYClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E5D1B35E1C300C06102 /* CPYClip.swift */; };
+		FAC43E601B35E3DF00C06102 /* CPYClipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E5F1B35E3DF00C06102 /* CPYClipData.swift */; };
+		FAC43E621B35EA4E00C06102 /* CPYFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E611B35EA4E00C06102 /* CPYFolder.swift */; };
+		FAC43E641B35EA6800C06102 /* CPYSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E631B35EA6800C06102 /* CPYSnippet.swift */; };
+		FAC43E671B35EC5400C06102 /* CPYMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E661B35EC5400C06102 /* CPYMenuManager.swift */; };
+		FAC43E691B35EC6200C06102 /* CPYClipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E681B35EC6200C06102 /* CPYClipManager.swift */; };
+		FAC43E6B1B35EC7000C06102 /* CPYSnippetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E6A1B35EC7000C06102 /* CPYSnippetManager.swift */; };
+		FAC43E6D1B35EC8900C06102 /* CPYHotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E6C1B35EC8900C06102 /* CPYHotKeyManager.swift */; };
+		FAC43E701B35F51F00C06102 /* CPYConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E6F1B35F51F00C06102 /* CPYConstants.swift */; };
+		FAC43E721B36D0A600C06102 /* CPYUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC43E711B36D0A600C06102 /* CPYUtilities.swift */; };
+		FADAF7BA1BD946E8006DB2D0 /* NSImage+AssetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAF7B91BD946E8006DB2D0 /* NSImage+AssetCatalog.swift */; };
+		FAF1DA0A1B41888F00E15D16 /* CPYPreferenceWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DA0C1B41888F00E15D16 /* CPYPreferenceWindowController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAC43DD91B35D8B100C06102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC43DBE1B35D8B100C06102 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC43DC51B35D8B100C06102;
+			remoteInfo = Clipy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAC43E1D1B35DF4A00C06102 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FAC43E1C1B35DF4A00C06102 /* PTHotKey.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		476A3D8A1C73EC2A00B621B6 /* XCDClipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCDClipController.swift; sourceTree = "<group>"; };
+		476A3D8B1C73EC2A00B621B6 /* XCDClipController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCDClipController.xib; sourceTree = "<group>"; };
+		54A26F5320EBAAB0F9D0813E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95188F89C10FD1FC6DB0F825 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E2265F0B70723AFEA6D247B6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FA0C027E1B42C2B2009A558D /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		FA3B95F41B3FB9FD00B61FF0 /* CPYPreferenceWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYPreferenceWindowController.swift; sourceTree = "<group>"; };
+		FA3B95F81B3FBA1100B61FF0 /* CPYSnippetEditorWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYSnippetEditorWindowController.swift; sourceTree = "<group>"; };
+		FA3B96031B3FD4AC00B61FF0 /* CPYImageAndTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYImageAndTextCell.swift; sourceTree = "<group>"; };
+		FA3B96051B3FD4BA00B61FF0 /* CPYFolderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYFolderTableView.swift; sourceTree = "<group>"; };
+		FA3B96071B3FD4C700B61FF0 /* CPYSnippetTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYSnippetTableView.swift; sourceTree = "<group>"; };
+		FA51AAD21B4853ED00BDDE1D /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		FA71E3F71BA0A66300369F92 /* CPYHistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYHistoryManager.swift; sourceTree = "<group>"; };
+		FA823D771B4042F200009614 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CPYSnippetEditorWindowController.xib; sourceTree = "<group>"; };
+		FA823D7B1B40439500009614 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/CPYSnippetEditorWindowController.xib; sourceTree = "<group>"; };
+		FA8B8E671B65193F00AA65AF /* NSImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Resize.swift"; sourceTree = "<group>"; };
+		FAC43DC61B35D8B100C06102 /* XClipdiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XClipdiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC43DCA1B35D8B100C06102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC43DCB1B35D8B100C06102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAC43DCF1B35D8B100C06102 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAC43DD81B35D8B100C06102 /* XClipdiary.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XClipdiary.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC43DDD1B35D8B100C06102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC43DDE1B35D8B100C06102 /* ClipyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipyTests.swift; sourceTree = "<group>"; };
+		FAC43DE81B35DAA400C06102 /* Clipy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clipy-Bridging-Header.h"; sourceTree = "<group>"; };
+		FAC43DF81B35DD4300C06102 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FAC43DFA1B35DD5200C06102 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FAC43E191B35DF2500C06102 /* PTHotKey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PTHotKey.framework; sourceTree = "<group>"; };
+		FAC43E221B35DFC800C06102 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FAC43E241B35DFD000C06102 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		FAC43E261B35DFD300C06102 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		FAC43E281B35DFDA00C06102 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		FAC43E2A1B35DFDF00C06102 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		FAC43E441B35E12900C06102 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLMSupport.swift; path = Clipy/Libraries/Realm/RLMSupport.swift; sourceTree = SOURCE_ROOT; };
+		FAC43E461B35E13000C06102 /* ShortcutRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShortcutRecorder.h; path = Clipy/Libraries/ShortcutRecorder/ShortcutRecorder.h; sourceTree = SOURCE_ROOT; };
+		FAC43E471B35E13000C06102 /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRCommon.h; path = Clipy/Libraries/ShortcutRecorder/SRCommon.h; sourceTree = SOURCE_ROOT; };
+		FAC43E481B35E13000C06102 /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRCommon.m; path = Clipy/Libraries/ShortcutRecorder/SRCommon.m; sourceTree = SOURCE_ROOT; };
+		FAC43E491B35E13000C06102 /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRKeyCodeTransformer.h; path = Clipy/Libraries/ShortcutRecorder/SRKeyCodeTransformer.h; sourceTree = SOURCE_ROOT; };
+		FAC43E4A1B35E13000C06102 /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRKeyCodeTransformer.m; path = Clipy/Libraries/ShortcutRecorder/SRKeyCodeTransformer.m; sourceTree = SOURCE_ROOT; };
+		FAC43E4B1B35E13000C06102 /* SRRecorderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRecorderCell.h; path = Clipy/Libraries/ShortcutRecorder/SRRecorderCell.h; sourceTree = SOURCE_ROOT; };
+		FAC43E4C1B35E13000C06102 /* SRRecorderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRRecorderCell.m; path = Clipy/Libraries/ShortcutRecorder/SRRecorderCell.m; sourceTree = SOURCE_ROOT; };
+		FAC43E4D1B35E13000C06102 /* SRRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRecorderControl.h; path = Clipy/Libraries/ShortcutRecorder/SRRecorderControl.h; sourceTree = SOURCE_ROOT; };
+		FAC43E4E1B35E13000C06102 /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRRecorderControl.m; path = Clipy/Libraries/ShortcutRecorder/SRRecorderControl.m; sourceTree = SOURCE_ROOT; };
+		FAC43E4F1B35E13000C06102 /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRValidator.h; path = Clipy/Libraries/ShortcutRecorder/SRValidator.h; sourceTree = SOURCE_ROOT; };
+		FAC43E501B35E13000C06102 /* SRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRValidator.m; path = Clipy/Libraries/ShortcutRecorder/SRValidator.m; sourceTree = SOURCE_ROOT; };
+		FAC43E561B35E13D00C06102 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPrefsWindowController.h; path = Clipy/Libraries/DBPrefsWindowController/DBPrefsWindowController.h; sourceTree = SOURCE_ROOT; };
+		FAC43E571B35E13D00C06102 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBPrefsWindowController.m; path = Clipy/Libraries/DBPrefsWindowController/DBPrefsWindowController.m; sourceTree = SOURCE_ROOT; };
+		FAC43E591B35E14500C06102 /* NMLoginItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMLoginItems.h; path = Clipy/Libraries/NMLoginItems/NMLoginItems.h; sourceTree = SOURCE_ROOT; };
+		FAC43E5A1B35E14500C06102 /* NMLoginItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMLoginItems.m; path = Clipy/Libraries/NMLoginItems/NMLoginItems.m; sourceTree = SOURCE_ROOT; };
+		FAC43E5D1B35E1C300C06102 /* CPYClip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYClip.swift; sourceTree = "<group>"; };
+		FAC43E5F1B35E3DF00C06102 /* CPYClipData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYClipData.swift; sourceTree = "<group>"; };
+		FAC43E611B35EA4E00C06102 /* CPYFolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYFolder.swift; sourceTree = "<group>"; };
+		FAC43E631B35EA6800C06102 /* CPYSnippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYSnippet.swift; sourceTree = "<group>"; };
+		FAC43E661B35EC5400C06102 /* CPYMenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYMenuManager.swift; sourceTree = "<group>"; };
+		FAC43E681B35EC6200C06102 /* CPYClipManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYClipManager.swift; sourceTree = "<group>"; };
+		FAC43E6A1B35EC7000C06102 /* CPYSnippetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYSnippetManager.swift; sourceTree = "<group>"; };
+		FAC43E6C1B35EC8900C06102 /* CPYHotKeyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYHotKeyManager.swift; sourceTree = "<group>"; };
+		FAC43E6F1B35F51F00C06102 /* CPYConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYConstants.swift; sourceTree = "<group>"; };
+		FAC43E711B36D0A600C06102 /* CPYUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYUtilities.swift; sourceTree = "<group>"; };
+		FADAF7B91BD946E8006DB2D0 /* NSImage+AssetCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+AssetCatalog.swift"; sourceTree = "<group>"; };
+		FAF1DA0B1B41888F00E15D16 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CPYPreferenceWindowController.xib; sourceTree = "<group>"; };
+		FAF1DA0F1B41889800E15D16 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/CPYPreferenceWindowController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAC43DC31B35D8B100C06102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC43E2B1B35DFDF00C06102 /* WebKit.framework in Frameworks */,
+				FAC43E291B35DFDA00C06102 /* Cocoa.framework in Frameworks */,
+				FAC43E271B35DFD300C06102 /* Carbon.framework in Frameworks */,
+				FAC43E251B35DFD000C06102 /* AppKit.framework in Frameworks */,
+				FAC43E231B35DFC800C06102 /* Foundation.framework in Frameworks */,
+				FAC43E1B1B35DF4A00C06102 /* PTHotKey.framework in Frameworks */,
+				2EB7901EB70A7ABAFB2DE18E /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC43DD51B35D8B100C06102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CB0F71AAC48A392535FD3B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43E2A1B35DFDF00C06102 /* WebKit.framework */,
+				FAC43E281B35DFDA00C06102 /* Cocoa.framework */,
+				FAC43E261B35DFD300C06102 /* Carbon.framework */,
+				FAC43E241B35DFD000C06102 /* AppKit.framework */,
+				FAC43E221B35DFC800C06102 /* Foundation.framework */,
+				FAC43E191B35DF2500C06102 /* PTHotKey.framework */,
+				54A26F5320EBAAB0F9D0813E /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		613917866A675237A79A4556 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2265F0B70723AFEA6D247B6 /* Pods.debug.xcconfig */,
+				95188F89C10FD1FC6DB0F825 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA3B95F31B3FB9DF00B61FF0 /* WindowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA3B95F41B3FB9FD00B61FF0 /* CPYPreferenceWindowController.swift */,
+				FAF1DA0C1B41888F00E15D16 /* CPYPreferenceWindowController.xib */,
+				FA3B95F81B3FBA1100B61FF0 /* CPYSnippetEditorWindowController.swift */,
+				FA823D781B4042F200009614 /* CPYSnippetEditorWindowController.xib */,
+				476A3D8A1C73EC2A00B621B6 /* XCDClipController.swift */,
+				476A3D8B1C73EC2A00B621B6 /* XCDClipController.xib */,
+			);
+			path = WindowControllers;
+			sourceTree = "<group>";
+		};
+		FA3B96001B3FD47000B61FF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA3B96021B3FD48B00B61FF0 /* TableViewCell */,
+				FA3B96011B3FD47E00B61FF0 /* TableViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA3B96011B3FD47E00B61FF0 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				FA3B96051B3FD4BA00B61FF0 /* CPYFolderTableView.swift */,
+				FA3B96071B3FD4C700B61FF0 /* CPYSnippetTableView.swift */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		FA3B96021B3FD48B00B61FF0 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA3B96031B3FD4AC00B61FF0 /* CPYImageAndTextCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		FA8B8E661B65190800AA65AF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FA8B8E671B65193F00AA65AF /* NSImage+Resize.swift */,
+				FADAF7B91BD946E8006DB2D0 /* NSImage+AssetCatalog.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		FAC43DBD1B35D8B100C06102 = {
+			isa = PBXGroup;
+			children = (
+				FAC43DC81B35D8B100C06102 /* Clipy */,
+				FAC43DDB1B35D8B100C06102 /* ClipyTests */,
+				FAC43DC71B35D8B100C06102 /* Products */,
+				613917866A675237A79A4556 /* Pods */,
+				2CB0F71AAC48A392535FD3B0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAC43DC71B35D8B100C06102 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43DC61B35D8B100C06102 /* XClipdiary.app */,
+				FAC43DD81B35D8B100C06102 /* XClipdiary.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAC43DC81B35D8B100C06102 /* Clipy */ = {
+			isa = PBXGroup;
+			children = (
+				FA8B8E661B65190800AA65AF /* Categories */,
+				FAC43E6E1B35F36E00C06102 /* Utility */,
+				FA3B96001B3FD47000B61FF0 /* Views */,
+				FA3B95F31B3FB9DF00B61FF0 /* WindowControllers */,
+				FAC43E651B35EC4200C06102 /* Managers */,
+				FAC43E5C1B35E1A100C06102 /* Models */,
+				FAC43DEC1B35DABC00C06102 /* AppDelegate */,
+				FAC43DCF1B35D8B100C06102 /* Images.xcassets */,
+				FA51AAD21B4853ED00BDDE1D /* MainMenu.xib */,
+				FAC43E6F1B35F51F00C06102 /* CPYConstants.swift */,
+				FAC43DFC1B35DDE700C06102 /* Libraries */,
+				FAC43DC91B35D8B100C06102 /* Supporting Files */,
+			);
+			path = Clipy;
+			sourceTree = "<group>";
+		};
+		FAC43DC91B35D8B100C06102 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C027E1B42C2B2009A558D /* dsa_pub.pem */,
+				FAC43DCA1B35D8B100C06102 /* Info.plist */,
+				FAC43DE81B35DAA400C06102 /* Clipy-Bridging-Header.h */,
+				FAC43DF91B35DD4300C06102 /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAC43DDB1B35D8B100C06102 /* ClipyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43DDE1B35D8B100C06102 /* ClipyTests.swift */,
+				FAC43DDC1B35D8B100C06102 /* Supporting Files */,
+			);
+			path = ClipyTests;
+			sourceTree = "<group>";
+		};
+		FAC43DDC1B35D8B100C06102 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43DDD1B35D8B100C06102 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAC43DEC1B35DABC00C06102 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43DCB1B35D8B100C06102 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FAC43DFC1B35DDE700C06102 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43E161B35DE8800C06102 /* Realm */,
+				FAC43E051B35DE7500C06102 /* ShortcutRecorder */,
+				FAC43E011B35DE5C00C06102 /* DBPrefsWindowController */,
+				FAC43DFD1B35DE0500C06102 /* NMLoginItems */,
+			);
+			name = Libraries;
+			path = Library;
+			sourceTree = "<group>";
+		};
+		FAC43DFD1B35DE0500C06102 /* NMLoginItems */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43E591B35E14500C06102 /* NMLoginItems.h */,
+				FAC43E5A1B35E14500C06102 /* NMLoginItems.m */,
+			);
+			path = NMLoginItems;
+			sourceTree = "<group>";
+		};
+		FAC43E011B35DE5C00C06102 /* DBPrefsWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43E561B35E13D00C06102 /* DBPrefsWindowController.h */,
+				FAC43E571B35E13D00C06102 /* DBPrefsWindowController.m */,
+			);
+			path = DBPrefsWindowController;
+			sourceTree = "<group>";
+		};
+		FAC43E051B35DE7500C06102 /* ShortcutRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43E461B35E13000C06102 /* ShortcutRecorder.h */,
+				FAC43E471B35E13000C06102 /* SRCommon.h */,
+				FAC43E481B35E13000C06102 /* SRCommon.m */,
+				FAC43E491B35E13000C06102 /* SRKeyCodeTransformer.h */,
+				FAC43E4A1B35E13000C06102 /* SRKeyCodeTransformer.m */,
+				FAC43E4B1B35E13000C06102 /* SRRecorderCell.h */,
+				FAC43E4C1B35E13000C06102 /* SRRecorderCell.m */,
+				FAC43E4D1B35E13000C06102 /* SRRecorderControl.h */,
+				FAC43E4E1B35E13000C06102 /* SRRecorderControl.m */,
+				FAC43E4F1B35E13000C06102 /* SRValidator.h */,
+				FAC43E501B35E13000C06102 /* SRValidator.m */,
+			);
+			path = ShortcutRecorder;
+			sourceTree = "<group>";
+		};
+		FAC43E161B35DE8800C06102 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43E441B35E12900C06102 /* RLMSupport.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		FAC43E5C1B35E1A100C06102 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43E5D1B35E1C300C06102 /* CPYClip.swift */,
+				FAC43E5F1B35E3DF00C06102 /* CPYClipData.swift */,
+				FAC43E611B35EA4E00C06102 /* CPYFolder.swift */,
+				FAC43E631B35EA6800C06102 /* CPYSnippet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAC43E651B35EC4200C06102 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43E661B35EC5400C06102 /* CPYMenuManager.swift */,
+				FAC43E681B35EC6200C06102 /* CPYClipManager.swift */,
+				FAC43E6A1B35EC7000C06102 /* CPYSnippetManager.swift */,
+				FAC43E6C1B35EC8900C06102 /* CPYHotKeyManager.swift */,
+				FA71E3F71BA0A66300369F92 /* CPYHistoryManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FAC43E6E1B35F36E00C06102 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FAC43E711B36D0A600C06102 /* CPYUtilities.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAC43DC51B35D8B100C06102 /* XClipdiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC43DE21B35D8B100C06102 /* Build configuration list for PBXNativeTarget "XClipdiary" */;
+			buildPhases = (
+				1322803958BEE0411B7E81CF /* Check Pods Manifest.lock */,
+				FAC43DC21B35D8B100C06102 /* Sources */,
+				FAC43DC31B35D8B100C06102 /* Frameworks */,
+				FAC43DC41B35D8B100C06102 /* Resources */,
+				A5423A032C243BC92F38902D /* Copy Pods Resources */,
+				FAC43E1D1B35DF4A00C06102 /* Embed Frameworks */,
+				F5FDC50BD710A036F5091F31 /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XClipdiary;
+			productName = Clipy;
+			productReference = FAC43DC61B35D8B100C06102 /* XClipdiary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAC43DD71B35D8B100C06102 /* XClipdiaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC43DE51B35D8B100C06102 /* Build configuration list for PBXNativeTarget "XClipdiaryTests" */;
+			buildPhases = (
+				FAC43DD41B35D8B100C06102 /* Sources */,
+				FAC43DD51B35D8B100C06102 /* Frameworks */,
+				FAC43DD61B35D8B100C06102 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAC43DDA1B35D8B100C06102 /* PBXTargetDependency */,
+			);
+			name = XClipdiaryTests;
+			productName = ClipyTests;
+			productReference = FAC43DD81B35D8B100C06102 /* XClipdiary.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAC43DBE1B35D8B100C06102 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CPY;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Shunsuke Furubayashi";
+				TargetAttributes = {
+					FAC43DC51B35D8B100C06102 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					FAC43DD71B35D8B100C06102 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = FAC43DC51B35D8B100C06102;
+					};
+				};
+			};
+			buildConfigurationList = FAC43DC11B35D8B100C06102 /* Build configuration list for PBXProject "XClipdiary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = FAC43DBD1B35D8B100C06102;
+			productRefGroup = FAC43DC71B35D8B100C06102 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAC43DC51B35D8B100C06102 /* XClipdiary */,
+				FAC43DD71B35D8B100C06102 /* XClipdiaryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAC43DC41B35D8B100C06102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC43DD01B35D8B100C06102 /* Images.xcassets in Resources */,
+				FA0C027F1B42C2B2009A558D /* dsa_pub.pem in Resources */,
+				FAC43DF71B35DD4300C06102 /* Localizable.strings in Resources */,
+				FA823D761B4042F200009614 /* CPYSnippetEditorWindowController.xib in Resources */,
+				FA51AAD31B4853ED00BDDE1D /* MainMenu.xib in Resources */,
+				476A3D8D1C73EC2A00B621B6 /* XCDClipController.xib in Resources */,
+				FAF1DA0A1B41888F00E15D16 /* CPYPreferenceWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC43DD61B35D8B100C06102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1322803958BEE0411B7E81CF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A5423A032C243BC92F38902D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5FDC50BD710A036F5091F31 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAC43DC21B35D8B100C06102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC43E6D1B35EC8900C06102 /* CPYHotKeyManager.swift in Sources */,
+				FAC43E521B35E13000C06102 /* SRKeyCodeTransformer.m in Sources */,
+				FAC43E721B36D0A600C06102 /* CPYUtilities.swift in Sources */,
+				FA3B96081B3FD4C700B61FF0 /* CPYSnippetTableView.swift in Sources */,
+				FAC43E511B35E13000C06102 /* SRCommon.m in Sources */,
+				FAC43E621B35EA4E00C06102 /* CPYFolder.swift in Sources */,
+				FA3B96061B3FD4BA00B61FF0 /* CPYFolderTableView.swift in Sources */,
+				FAC43E671B35EC5400C06102 /* CPYMenuManager.swift in Sources */,
+				FADAF7BA1BD946E8006DB2D0 /* NSImage+AssetCatalog.swift in Sources */,
+				FAC43E641B35EA6800C06102 /* CPYSnippet.swift in Sources */,
+				FAC43E701B35F51F00C06102 /* CPYConstants.swift in Sources */,
+				FAC43E5E1B35E1C300C06102 /* CPYClip.swift in Sources */,
+				FAC43E5B1B35E14500C06102 /* NMLoginItems.m in Sources */,
+				FA3B95FA1B3FBA1100B61FF0 /* CPYSnippetEditorWindowController.swift in Sources */,
+				FA71E3F81BA0A66300369F92 /* CPYHistoryManager.swift in Sources */,
+				FAC43E531B35E13000C06102 /* SRRecorderCell.m in Sources */,
+				FAC43E541B35E13000C06102 /* SRRecorderControl.m in Sources */,
+				FAC43E601B35E3DF00C06102 /* CPYClipData.swift in Sources */,
+				FAC43DCC1B35D8B100C06102 /* AppDelegate.swift in Sources */,
+				FA8B8E681B65193F00AA65AF /* NSImage+Resize.swift in Sources */,
+				FA3B96041B3FD4AC00B61FF0 /* CPYImageAndTextCell.swift in Sources */,
+				476A3D8C1C73EC2A00B621B6 /* XCDClipController.swift in Sources */,
+				FA3B95F61B3FB9FD00B61FF0 /* CPYPreferenceWindowController.swift in Sources */,
+				FAC43E451B35E12900C06102 /* RLMSupport.swift in Sources */,
+				FAC43E6B1B35EC7000C06102 /* CPYSnippetManager.swift in Sources */,
+				FAC43E551B35E13000C06102 /* SRValidator.m in Sources */,
+				FAC43E691B35EC6200C06102 /* CPYClipManager.swift in Sources */,
+				FAC43E581B35E13D00C06102 /* DBPrefsWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC43DD41B35D8B100C06102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC43DDF1B35D8B100C06102 /* ClipyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAC43DDA1B35D8B100C06102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAC43DC51B35D8B100C06102 /* XClipdiary */;
+			targetProxy = FAC43DD91B35D8B100C06102 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA823D781B4042F200009614 /* CPYSnippetEditorWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA823D771B4042F200009614 /* en */,
+				FA823D7B1B40439500009614 /* ja */,
+			);
+			name = CPYSnippetEditorWindowController.xib;
+			sourceTree = "<group>";
+		};
+		FAC43DF91B35DD4300C06102 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAC43DF81B35DD4300C06102 /* ja */,
+				FAC43DFA1B35DD5200C06102 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		FAF1DA0C1B41888F00E15D16 /* CPYPreferenceWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF1DA0B1B41888F00E15D16 /* en */,
+				FAF1DA0F1B41889800E15D16 /* ja */,
+			);
+			name = CPYPreferenceWindowController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAC43DE01B35D8B100C06102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAC43DE11B35D8B100C06102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FAC43DE31B35D8B100C06102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2265F0B70723AFEA6D247B6 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Clipy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spolty.XClipdiary;
+				PRODUCT_NAME = XClipdiary;
+				SWIFT_OBJC_BRIDGING_HEADER = "Clipy/Clipy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAC43DE41B35D8B100C06102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95188F89C10FD1FC6DB0F825 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Clipy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spolty.XClipdiary;
+				PRODUCT_NAME = XClipdiary;
+				SWIFT_OBJC_BRIDGING_HEADER = "Clipy/Clipy-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		FAC43DE61B35D8B100C06102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ClipyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clipyapp.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = XClipdiary;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XClipdiary.app/Contents/MacOS/XClipdiary";
+			};
+			name = Debug;
+		};
+		FAC43DE71B35D8B100C06102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ClipyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clipyapp.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = XClipdiary;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XClipdiary.app/Contents/MacOS/XClipdiary";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAC43DC11B35D8B100C06102 /* Build configuration list for PBXProject "XClipdiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC43DE01B35D8B100C06102 /* Debug */,
+				FAC43DE11B35D8B100C06102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC43DE21B35D8B100C06102 /* Build configuration list for PBXNativeTarget "XClipdiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC43DE31B35D8B100C06102 /* Debug */,
+				FAC43DE41B35D8B100C06102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC43DE51B35D8B100C06102 /* Build configuration list for PBXNativeTarget "XClipdiaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC43DE61B35D8B100C06102 /* Debug */,
+				FAC43DE71B35D8B100C06102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAC43DBE1B35D8B100C06102 /* Project object */;
+}

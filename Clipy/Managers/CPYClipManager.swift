@@ -19,6 +19,7 @@ class CPYClipManager: NSObject {
     private let mainQueue = dispatch_get_main_queue()
     private var pasteboardObservingTimer: NSTimer?
     private var isCopyingPsteboard = false
+    private var currentIndex: UInt = 0
     
     // MARK: - Init
     override init() {
@@ -33,6 +34,8 @@ class CPYClipManager: NSObject {
 
         // Timer
         self.startPasteboardObservingTimer()
+        let count = loadClips().count
+        self.currentIndex = count > 0 ? count - 1 : 0
         
         defaults.addObserver(self, forKeyPath: kCPYPrefMaxHistorySizeKey, options: NSKeyValueObservingOptions.New, context: nil)
         defaults.addObserver(self, forKeyPath: kCPYPrefTimeIntervalKey, options: NSKeyValueObservingOptions.New, context: nil)
@@ -67,8 +70,8 @@ class CPYClipManager: NSObject {
     }
     
     func loadSortedClips() -> RLMResults {
-        let ascending = !NSUserDefaults.standardUserDefaults().boolForKey(kCPYPrefReorderClipsAfterPasting)
-        return CPYClip.allObjects().sortedResultsUsingProperty("updateTime", ascending: ascending)
+//        let ascending = !NSUserDefaults.standardUserDefaults().boolForKey(kCPYPrefReorderClipsAfterPasting)
+        return CPYClip.allObjects().sortedResultsUsingProperty("updateTime", ascending: true)
     }
     
     func clearAll() {
@@ -90,6 +93,8 @@ class CPYClipManager: NSObject {
         realm.transactionWithBlock({ () -> Void in
             realm.deleteObjects(results)
         })
+        
+        self.currentIndex = 0
         
         CPYHistoryManager.sharedManager.cleanHistory()
         
@@ -229,6 +234,8 @@ class CPYClipManager: NSObject {
                         realm.transactionWithBlock({ () -> Void in
                             realm.addOrUpdateObject(clip)
                         })
+                        let count = loadClips().count
+                        self.currentIndex = count > 0 ? count - 1 : 0
                     }
                 }
                 
@@ -260,6 +267,46 @@ class CPYClipManager: NSObject {
         if self.pasteboardObservingTimer != nil && self.pasteboardObservingTimer!.valid {
             self.pasteboardObservingTimer?.invalidate()
         }
+    }
+    
+    func copyPrevClipToPasteboard() -> CPYClip? {
+        var clip: CPYClip!
+        if (self.currentIndex > 0){
+            self.currentIndex -= 1
+            clip = loadSortedClips()[self.currentIndex] as? CPYClip
+        }
+        else {
+            clip = loadSortedClips().firstObject() as? CPYClip
+        }
+        
+        if clip != nil {
+            self.copyClipToPasteboard(clip)
+        }
+        
+        return clip
+    }
+    
+    func copyNextClipToPasteboard() -> CPYClip? {
+        let numberOfClips = loadClips().count
+        
+        if (numberOfClips == 0) {
+            return nil
+        }
+        
+        var clip: CPYClip!
+        if (self.currentIndex + 1 < numberOfClips){
+            self.currentIndex += 1
+            clip = loadSortedClips()[self.currentIndex] as? CPYClip
+        }
+        else {
+            clip = loadSortedClips().lastObject() as? CPYClip
+        }
+        
+        if clip != nil {
+            self.copyClipToPasteboard(clip)
+        }
+        
+        return clip;
     }
     
     // MARK: Private Methods

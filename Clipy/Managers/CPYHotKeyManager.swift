@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import Foundation
+
 
 class CPYHotKeyManager: NSObject {
 
@@ -26,6 +28,12 @@ class CPYHotKeyManager: NSObject {
         
         dict = [kIndex: NSNumber(unsignedInteger: 2), kSelector: "popUpSnippetsMenu:"]
         map.updateValue(dict, forKey: kSnippetsMenuIdentifier)
+        
+        dict = [kIndex: NSNumber(unsignedInteger: 3), kSelector: "popUpCopyPrevClipMenu:"]
+        map.updateValue(dict, forKey: kCopyPrevClipMenuIdentifier)
+        
+        dict = [kIndex: NSNumber(unsignedInteger: 4), kSelector: "popUpCopyNextClipMenu:"]
+        map.updateValue(dict, forKey: kCopyNextClipMenuIdentifier)
         
         return map
     }
@@ -71,6 +79,14 @@ class CPYHotKeyManager: NSObject {
         
         // Snipeets menu key combo (command+ shift + b)
         keyCombo = PTKeyCombo(keyCode: 11, modifiers: 768)
+        newCombos.append(keyCombo)
+        
+        // copy prev clip menu key combo (clipController + alt + Up)
+        keyCombo = PTKeyCombo(keyCode: 12, modifiers: 768)
+        newCombos.append(keyCombo)
+        
+        // copy next clip key combo (clipController + alt + Down)
+        keyCombo = PTKeyCombo(keyCode: 13, modifiers: 768)
         newCombos.append(keyCombo)
         
         let hotKeyMap = self.sharedManager.hotkeyMap
@@ -131,4 +147,66 @@ class CPYHotKeyManager: NSObject {
         CPYMenuManager.sharedManager.popUpMenuForType(.Snippets)
     }
     
+    private var clipController: XCDClipController!
+    
+    func popUpCopyPrevClipMenu(sender: AnyObject) {
+        popUpCopyClipWindow(CPYClipManager.sharedManager.copyPrevClipToPasteboard())
+    }
+    
+    func popUpCopyNextClipMenu(sender: AnyObject) {
+        popUpCopyClipWindow(CPYClipManager.sharedManager.copyNextClipToPasteboard())
+    }
+    
+    func hideCopyClipMenu(sender: AnyObject) {
+        clipController.close()
+    }
+    
+    func popUpCopyClipWindow(clip: CPYClip?) {
+        self.stopClipWindowTimer()
+        
+        if (clip != nil) {
+            //copy a clip to the paste board
+            CPYClipManager.sharedManager.copyClipToPasteboard(clip!)
+            print("clip title: \(clip!.title)")
+
+        }
+
+        //show popup
+        self.createXCDClipController()
+        self.clipController.updateClip(clip)
+        self.clipController.showWindow(nil)
+        
+        self.startClipWindowTimer()
+    }
+    
+    private func createXCDClipController() {
+        //create clipController if it is not exists or a main screen is changed.
+        if (self.clipController == nil || self.clipController.window != nil && self.clipController.window?.screen != NSScreen.mainScreen()) {
+            self.clipController = XCDClipController(windowNibName: "XCDClipController")
+        }
+    }
+    
+    var clipWindowTimer: NSTimer?;
+    
+    // MARK: - Timer Methods
+    func startClipWindowTimer() {
+        self.stopClipWindowTimer()
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var timeInterval = defaults.floatForKey(kXCDPrefPopupIntervalKey)
+        if timeInterval > 3.0{
+            timeInterval = 3.0
+            defaults.setFloat(timeInterval, forKey: kXCDPrefPopupIntervalKey)
+        }
+        
+        self.clipWindowTimer = NSTimer(timeInterval: NSTimeInterval(timeInterval), target: self, selector: "hideCopyClipMenu:", userInfo: nil, repeats: false)
+        NSRunLoop.currentRunLoop().addTimer(self.clipWindowTimer!, forMode: NSRunLoopCommonModes)
+    }
+    
+    func stopClipWindowTimer() {
+        if self.clipWindowTimer != nil && self.clipWindowTimer!.valid {
+            self.clipWindowTimer?.invalidate()
+        }
+    }
+
 }

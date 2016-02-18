@@ -10,6 +10,7 @@
 		2EB7901EB70A7ABAFB2DE18E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A26F5320EBAAB0F9D0813E /* Pods.framework */; };
 		476A3D8C1C73EC2A00B621B6 /* XCDClipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476A3D8A1C73EC2A00B621B6 /* XCDClipController.swift */; };
 		476A3D8D1C73EC2A00B621B6 /* XCDClipController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476A3D8B1C73EC2A00B621B6 /* XCDClipController.xib */; };
+		476A3D901C75BFA600B621B6 /* XCDClipWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476A3D8F1C75BFA600B621B6 /* XCDClipWindow.swift */; };
 		FA0C027F1B42C2B2009A558D /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = FA0C027E1B42C2B2009A558D /* dsa_pub.pem */; };
 		FA3B95F61B3FB9FD00B61FF0 /* CPYPreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B95F41B3FB9FD00B61FF0 /* CPYPreferenceWindowController.swift */; };
 		FA3B95FA1B3FBA1100B61FF0 /* CPYSnippetEditorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B95F81B3FBA1100B61FF0 /* CPYSnippetEditorWindowController.swift */; };
@@ -80,6 +81,7 @@
 /* Begin PBXFileReference section */
 		476A3D8A1C73EC2A00B621B6 /* XCDClipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCDClipController.swift; sourceTree = "<group>"; };
 		476A3D8B1C73EC2A00B621B6 /* XCDClipController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCDClipController.xib; sourceTree = "<group>"; };
+		476A3D8F1C75BFA600B621B6 /* XCDClipWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCDClipWindow.swift; sourceTree = "<group>"; };
 		54A26F5320EBAAB0F9D0813E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95188F89C10FD1FC6DB0F825 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E2265F0B70723AFEA6D247B6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +182,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		476A3D8E1C75BF7400B621B6 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				476A3D8F1C75BFA600B621B6 /* XCDClipWindow.swift */,
+			);
+			name = Windows;
+			sourceTree = "<group>";
+		};
 		613917866A675237A79A4556 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +215,7 @@
 		FA3B96001B3FD47000B61FF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				476A3D8E1C75BF7400B621B6 /* Windows */,
 				FA3B96021B3FD48B00B61FF0 /* TableViewCell */,
 				FA3B96011B3FD47E00B61FF0 /* TableViews */,
 			);
@@ -575,6 +586,7 @@
 				FA71E3F81BA0A66300369F92 /* CPYHistoryManager.swift in Sources */,
 				FAC43E531B35E13000C06102 /* SRRecorderCell.m in Sources */,
 				FAC43E541B35E13000C06102 /* SRRecorderControl.m in Sources */,
+				476A3D901C75BFA600B621B6 /* XCDClipWindow.swift in Sources */,
 				FAC43E601B35E3DF00C06102 /* CPYClipData.swift in Sources */,
 				FAC43DCC1B35D8B100C06102 /* AppDelegate.swift in Sources */,
 				FA8B8E681B65193F00AA65AF /* NSImage+Resize.swift in Sources */,

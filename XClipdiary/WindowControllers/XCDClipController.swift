@@ -10,17 +10,21 @@ import Cocoa
 
 class XCDClipController: NSWindowController {
         
-    @IBOutlet weak var text: NSTextFieldCell!
+    @IBOutlet weak var textCell: NSTextFieldCell!
+    @IBOutlet weak var imageView: NSImageView!
+    @IBOutlet weak var dateCell: NSTextFieldCell!
     
     var clip: CPYClip?
+    private let SHORTEN_SYMBOL = "..."
+    private var shortVersion = ""
+    private let MAX_LINES = 7
+    private let MAX_LINE_LENGTH = 60
 
     override func windowDidLoad() {
         super.windowDidLoad()
 
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-        if self.clip != nil {
-            text.title = self.clip!.title
-        }
+        updateClip(self.clip)
     }
 }
 
@@ -33,52 +37,79 @@ extension XCDClipController: XCDClipDelegate {
     func updateClip(clip: CPYClip?) {
         self.clip = clip
         
-        if text != nil {
+        if self.textCell != nil {
+            //hide imageView
+            self.imageView.hidden = true
+            self.imageView.image = nil
+            
             if self.clip == nil {
-                text.title = "";
+                self.textCell.title = kEmptyString;
             }
             else {
-                text.title = self.clip!.title
+                let primaryPboardType = clip!.primaryType
+                var title = self.trimTitle(clip!.title)
+                
+                if primaryPboardType == NSTIFFPboardType {
+                    title = "(Image)"
+                } else if primaryPboardType == NSPDFPboardType {
+                    title = "(PDF)"
+                } else if primaryPboardType == NSFilenamesPboardType {
+                    title = "(Files:)\n\(title)"
+                }
+                
+                self.textCell.title = title
+                
+                let date = NSDate(timeIntervalSince1970: NSTimeInterval(clip!.updateTime))
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "HH:mm:ss yyyy-MM-dd"
+                self.dateCell.title = dateFormatter.stringFromDate(date)
+                
+                let defaults = NSUserDefaults.standardUserDefaults()
+                let isShowImage = defaults.boolForKey(kCPYPrefShowImageInTheMenuKey)
+                if !clip!.thumbnailPath.isEmpty && isShowImage {
+                    PINCache.sharedCache().objectForKey(clip!.thumbnailPath, block: { (cache, key, object) -> Void in
+                        if let image = object as? NSImage {
+                            self.imageView.hidden = false
+                            self.imageView.image = image
+                        }
+                    })
+                }
             }
         }
     }
     
-}
-
-class BluredWindow: NSWindow, NSApplicationDelegate, NSWindowDelegate {
-    /**
-     *
-     */
-    override init(contentRect: NSRect, styleMask aStyle: Int, backing bufferingType: NSBackingStoreType, `defer` flag: Bool) {
-        var mask: Int = aStyle
-        if #available(OSX 10.10, *) {
-            mask |= NSFullSizeContentViewWindowMask
+    private func trimTitle(clipString: String?) -> String {
+        if clipString == nil {
+            return kEmptyString
         }
         
-        super.init(contentRect: contentRect, styleMask: mask, backing: bufferingType, `defer`: flag)
+        let text = clipString!
         
-        self.contentView!.wantsLayer = true;/*this can and is set in the view*/
-        self.backgroundColor = NSColor.grayColor().colorWithAlphaComponent(0.8)
-        self.opaque = false
-        self.level =  Int(CGWindowLevelForKey(.MaximumWindowLevelKey))
+        var i = 0
+        var rows = [String]()
+        text.enumerateLines({ (row, stop) -> () in
+            let line = row as NSString
+            let aRange = NSMakeRange(0, 0)
+            var lineStart = 0, lineEnd = 0, contentsEnd = 0
+            line.getLineStart(&lineStart, end: &lineEnd, contentsEnd: &contentsEnd, forRange: aRange)
+            
+            var lineString = (lineEnd == line.length) ? line : line.substringToIndex(contentsEnd)
+            
+            if lineString.length > self.MAX_LINE_LENGTH {
+                lineString = lineString.substringToIndex(self.MAX_LINE_LENGTH - self.SHORTEN_SYMBOL.characters.count) + self.SHORTEN_SYMBOL
+            }
+            
+            rows.append(lineString as String)
+            
+            if (++i) == self.MAX_LINES {
+                stop = true
+            }
+        })
         
-        if #available(OSX 10.10, *) {
-        
-            self.titlebarAppearsTransparent = true
-            self.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
-
-            //<---the width and height is set to 0, as this doesn't matter.
-            let visualEffectView = NSVisualEffectView(frame: NSMakeRect(0, 0, 0, 0))
-            visualEffectView.wantsLayer = true
-            //Dark,MediumLight,PopOver,UltraDark,AppearanceBased,Titlebar,Menu
-            visualEffectView.material = NSVisualEffectMaterial.Light
-            //I think if you set this to WithinWindow you get the effect safari has in its TitleBar. It should have an Opaque background behind it or else it will not work well
-            visualEffectView.blendingMode = NSVisualEffectBlendingMode.BehindWindow
-            visualEffectView.state = NSVisualEffectState.Inactive//FollowsWindowActiveState,Inactive
-
-            self.contentView = visualEffectView/*you can also add the visualEffectView to the contentview, just add some width and height to the visualEffectView, you also need to flip the view if you like to work from TopLeft, do this through subclassing*/
+        if rows.count == MAX_LINES {
+            rows.append(SHORTEN_SYMBOL)
         }
+        
+        return rows.joinWithSeparator("\n")
     }
-    
-    required init?(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}/*Required by the NSWindow*/
 }

@@ -133,7 +133,7 @@ class AppDelegate: NSObject {
     // MARK: - Login Item Methods
     private func promptToAddLoginItems() {
         let alert = NSAlert()
-        alert.messageText = NSLocalizedString("Launch Clipy on system startup?", comment: "")
+        alert.messageText = NSLocalizedString("Launch XClipdiary on system startup?", comment: "")
         alert.informativeText = NSLocalizedString("You can change this setting in the Preferences if you want.", comment: "")
         alert.addButtonWithTitle(NSLocalizedString("Launch on system startup", comment: ""))
         alert.addButtonWithTitle(NSLocalizedString("Don't Launch", comment: ""))
@@ -171,7 +171,7 @@ class AppDelegate: NSObject {
     
     // MARK: - Version Up Methods
     private func checkUpdates() {
-        let feed = "http://clipy-app.com/appcast.xml"
+        let feed = "http://spolty.com/appcast.xml"
         if let feedURL = NSURL(string: feed) {
             SUUpdater.sharedUpdater().feedURL = feedURL
         }

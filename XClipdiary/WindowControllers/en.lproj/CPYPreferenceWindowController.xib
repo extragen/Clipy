@@ -122,7 +122,6 @@
                         </menu>
                     </popUpButtonCell>
                     <connections>
-                        <binding destination="2Lc-6R-cnC" name="enabled" keyPath="values.count" id="Rp2-xf-dTv"/>
                         <binding destination="2Lc-6R-cnC" name="selectedIndex" keyPath="values.kCPYPrefReorderClipsAfterPasting" id="60x-ps-HBE"/>
                     </connections>
                 </popUpButton>

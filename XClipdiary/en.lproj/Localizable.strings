@@ -6,7 +6,7 @@
   Copyright (c) 2015年 Shunsuke Furubayashi. All rights reserved.
 */
 
-"Launch Clipy on system startup?" = "Launch Clipy on system startup?";
+"Launch XClipdiary on system startup?" = "Launch XClipdiary on system startup?";
 
 "You can change this setting in the Preferences if you want." = "You can change this setting in the Preferences if you want.";
 
@@ -24,7 +24,7 @@
 
 "Preferences..." = "Preferences...";
 
-"Quit ClipMenu" = "Quit ClipMenu";
+"Quit XClipdiary" = "Quit XClipdiary";
 
 "History" = "History";
 

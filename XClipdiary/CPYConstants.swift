@@ -7,10 +7,10 @@
 //
 
 // Application Keys
-let kClipyIdentifier                                   = "Clipy"
-let kApplicationName                                   = "Clipy"
+let kClipyIdentifier                                   = "XClipdiary"
+let kApplicationName                                   = "XClipdiary"
 
-let kClipMenuIdentifier                                = "ClipMenu"
+let kClipMenuIdentifier                                = "XClipdiary"
 let kHistoryMenuIdentifier                             = "HistoryMenu"
 let kSnippetsMenuIdentifier                            = "SnippetsMenu"
 let kCopyPrevClipMenuIdentifier                        = "CopyPrevClipMenu"

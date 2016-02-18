@@ -126,7 +126,7 @@ class CPYMenuManager: NSObject {
         newMenu.addItem(self.makeMenuItemWithTitle(NSLocalizedString("Preferences...", comment: ""), action: "showPreferenceWindow"))
         newMenu.addItem(NSMenuItem.separatorItem())
         
-        newMenu.addItem(self.makeMenuItemWithTitle(NSLocalizedString("Quit ClipMenu", comment: ""), action: "terminate:"))
+        newMenu.addItem(self.makeMenuItemWithTitle(NSLocalizedString("Quit XClipdiary", comment: ""), action: "terminate:"))
         
         self.clipMenu = newMenu
     }
